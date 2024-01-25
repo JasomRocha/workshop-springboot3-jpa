@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import com.jrsolutions.course.entities.User;
 import com.jrsolutions.course.repositories.UserRepository;
 
-@Service
+@Service //informammos ao spring que essa classe é um componente do tipo servico
 public class UserService {
 	
-	@Autowired
+	@Autowired //declaramos a dependencia, o spring fará essa injeção
 	private UserRepository repository;
 	
 	public List<User> findAll(){

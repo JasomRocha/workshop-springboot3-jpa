@@ -28,8 +28,8 @@ public class User implements Serializable{
 	private String phone;
 	private String password;
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "client")
+	@JsonIgnore //Associação de mão dupla, necessita dessa anotação para nçao entrar em looping
+	@OneToMany(mappedBy = "client") //tem que colocar o atributo do jeito que está na classse User, informamos como está sendo mapeado no User
 	private List <Order> orders = new ArrayList<>();
 	
 	

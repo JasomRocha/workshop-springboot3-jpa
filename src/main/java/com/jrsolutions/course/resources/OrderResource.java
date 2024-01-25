@@ -13,14 +13,14 @@ import com.jrsolutions.course.entities.Order;
 import com.jrsolutions.course.services.OrderService;
 
 @RestController
-@RequestMapping(value = "/orders")
+@RequestMapping(value = "/orders") //informamos que podemos enviar o mapping orders na url
 public class OrderResource {
 	
 	@Autowired
-	private OrderService service;
+	private OrderService service; //instanciamos o serviço injetando dependencia
 	
 	@GetMapping
-	public ResponseEntity<List<Order>> findAll(){
+	public ResponseEntity<List<Order>> findAll(){ //minha requisição http
 		List<Order> list = service.findAll();
 		
 		return ResponseEntity.ok().body(list);

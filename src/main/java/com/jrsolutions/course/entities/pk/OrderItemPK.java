@@ -38,6 +38,8 @@ public class OrderItemPK implements Serializable {
 		this.product = product;
 	}
 	
+	
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(order, product);
